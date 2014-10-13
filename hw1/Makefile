@@ -2,7 +2,7 @@ PRE=
 CC=$(PRE)gcc
 CFLAG=
 all:
-        $(CC) $(CFLAG) -o convertGB gray_bin_conv.c
+        $(CC) $(CFLAG) -o convertGB hw1_main.c
 
 clean:
         /rm -rf convertGB
