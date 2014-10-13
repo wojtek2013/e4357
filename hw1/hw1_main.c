@@ -1,5 +1,7 @@
 /* UCSCX 4357 - HW1 - Wojciech Wojciak
    write functions converting gray o binary and binary to gray
+   REFERENCES / ACKNOWLEDGMENTS:
+   http://en.wikipedia.org/wiki/Gray_code
 /*
 
 /* exemplary (4bit) Gray / Binary table
