@@ -1,0 +1,68 @@
+binwalk HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768/GCC_ARM/libcapi.a > hw2_bin_walk_libcapi_a.txt
+
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+2718          0xA9E           ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+3426          0xD62           Unix home path string: "/home/emimon01/smb/work/mbed/emilmont/mbed_capi/gpio_irq_api.c"
+4342          0x10F6          LZMA compressed data, properties: 0x63, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+4422          0x1146          LZMA compressed data, properties: 0x7E, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+4582          0x11E6          LZMA compressed data, properties: 0xBF, dictionary size: 16777216 bytes, uncompressed size: 33554432 bytes
+6166          0x1816          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+8378          0x20BA          LZMA compressed data, properties: 0x76, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+10794         0x2A2A          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+12054         0x2F16          Unix home path string: "/home/emimon01/smb/work/mbed/emilmont/mbed_capi/serial_api.c"
+13338         0x341A          LZMA compressed data, properties: 0x8A, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+13418         0x346A          LZMA compressed data, properties: 0xA2, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+13498         0x34BA          LZMA compressed data, properties: 0xB4, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+13538         0x34E2          LZMA compressed data, properties: 0xC6, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+13578         0x350A          LZMA compressed data, properties: 0xD8, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+14698         0x396A          LZMA compressed data, properties: 0x6C, dictionary size: 16777216 bytes, uncompressed size: 5120 bytes
+16382         0x3FFE          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+17482         0x444A          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+18418         0x47F2          LZMA compressed data, properties: 0x75, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+19242         0x4B2A          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+20678         0x50C6          LZMA compressed data, properties: 0x88, dictionary size: 16777216 bytes, uncompressed size: 33554432 bytes
+20718         0x50EE          LZMA compressed data, properties: 0x9B, dictionary size: 16777216 bytes, uncompressed size: 805306368 bytes
+21182         0x52BE          LZMA compressed data, properties: 0x6C, dictionary size: 16777216 bytes, uncompressed size: 2560 bytes
+21670         0x54A6          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+23004         0x59DC          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+23980         0x5DAC          LZMA compressed data, properties: 0x5E, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+24100         0x5E24          LZMA compressed data, properties: 0x92, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+24220         0x5E9C          LZMA compressed data, properties: 0xC0, dictionary size: 16777216 bytes, uncompressed size: 33554432 bytes
+25424         0x6350          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+26808         0x68B8          LZMA compressed data, properties: 0x6E, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+26928         0x6930          LZMA compressed data, properties: 0xAB, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+28868         0x70C4          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+29788         0x745C          Unix home path string: "/home/emimon01/smb/work/mbed/emilmont/mbed_capi/spi_api.c"
+30972         0x78FC          LZMA compressed data, properties: 0x6C, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+31092         0x7974          LZMA compressed data, properties: 0x92, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+31172         0x79C4          LZMA compressed data, properties: 0xBF, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+33356         0x824C          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+34556         0x86FC          LZMA compressed data, properties: 0x6E, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+34636         0x874C          LZMA compressed data, properties: 0x8B, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+36624         0x8F10          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+37872         0x93F0          Unix home path string: "/home/emimon01/smb/work/mbed/emilmont/mbed_capi/can_api.c"
+38892         0x97EC          LZMA compressed data, properties: 0x7E, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+40204         0x9D0C          LZMA compressed data, properties: 0xB8, dictionary size: 16777216 bytes, uncompressed size: 5376 bytes
+40972         0xA00C          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+41756         0xA31C          LZMA compressed data, properties: 0x5E, dictionary size: 16777216 bytes, uncompressed size: 805306368 bytes
+42492         0xA5FC          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+50828         0xC68C          LZMA compressed data, properties: 0x5D, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+50908         0xC6DC          LZMA compressed data, properties: 0x75, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+50988         0xC72C          LZMA compressed data, properties: 0x90, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+53712         0xD1D0          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+54708         0xD5B4          LZMA compressed data, properties: 0x6C, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+54748         0xD5DC          LZMA compressed data, properties: 0x7E, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+55752         0xD9C8          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+56420         0xDC64          LZMA compressed data, properties: 0x5C, dictionary size: 16777216 bytes, uncompressed size: 805306368 bytes
+57116         0xDF1C          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+58944         0xE640          LZMA compressed data, properties: 0x8A, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+59104         0xE6E0          LZMA compressed data, properties: 0xBD, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+60256         0xEB60          LZMA compressed data, properties: 0xB4, dictionary size: 16777216 bytes, uncompressed size: 6144 bytes
+61336         0xEF98          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+62660         0xF4C4          LZMA compressed data, properties: 0x99, dictionary size: 16777216 bytes, uncompressed size: 838860800 bytes
+63660         0xF8AC          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+64484         0xFBE4          LZMA compressed data, properties: 0x5B, dictionary size: 16777216 bytes, uncompressed size: 100663296 bytes
+65420         0xFF8C          ELF 32-bit LSB relocatable, ARM, version 1 (SYSV)
+
