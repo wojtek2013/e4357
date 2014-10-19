@@ -1,0 +1,90 @@
+///////////////////// GCC ARM Embedded: //////////////////////
+
+/home/ww/e4357/hw2/HelloWorld_gcc_arm_lpc1768
+ww@debian:~/e4357/hw2$ for f in { `find HelloWorld_gcc_arm_lpc1768/*` }; do file $f >> gcc_arm; done
+ww@debian:~/e4357/hw2$ grep ASCII gcc_arm | wc -l
+66
+ww@debian:~/e4357/hw2$ grep ELF gcc_arm | wc -l
+4
+ww@debian:~/e4357/hw2$ grep archive gcc_arm | wc -l
+2
+##############################################################
+Question. How many binary (library or object) files?
+#########
+find ./* -name *.o -print | wc -l
+4
+find ./* -name *.a -print | wc -l
+2
+#########
+Answer: 4 object and 2 library files
+##############################################################
+
+##############################################################
+Question. How many text files and how many lines of text code?
+#########
+find ./* -name *.cpp -print | wc -l
+1
+find ./* -name *.h -print | wc -l
+53
+#########
+Answer: 54 (53+1) text files and 9706 (9694+12) lines of code
+##############################################################
+wc -l ./HelloWorld/main.cpp
+12 ./HelloWorld/main.cpp
+wc -l `find ./* -name *.h` | grep total
+  9694 total
+
+///////////////// UNIVISION///////////////////////////////////
+
+/home/ww/e4357/hw2/HelloWorld_uvision_lpc1768
+ww@debian:~/e4357/hw2$ for f in { `find HelloWorld_uvision_lpc1768/*` }; do file $f >> univision; done
+ww@debian:~/e4357/hw2$ grep ASCII univision | wc -l
+65
+ww@debian:~/e4357/hw2$ grep ELF univision | wc -l
+5
+ww@debian:~/e4357/hw2$ grep archive univision | wc -l
+2
+##############################################################
+Question. How many binary (library or object) files?
+#########
+find ./* -name *.o -print | wc -l
+5
+find ./* -name *.ar -print | wc -l
+2
+find ./* -name *.cpp -print | wc -l
+1
+find ./* -name *.h -print | wc -l
+53
+#########
+Answer: 7 (5+2) binary files, 54 (53+1) text files and 9706 (9694+12) lines of code
+##############################################################
+wc -l ./HelloWorld/main.cpp
+12 ./HelloWorld/main.cpp
+wc -l `find ./* -name *.h` | grep total
+  9694 total
+
+#############################################################
+Question: How many files are different between GCC ARM and uVISION 
+########
+ww@debian:~/e4357/hw2$ diff --recursive --brief HelloWorld_gcc_arm_lpc1768 HelloWorld_uvision_lpc1768
+Only in HelloWorld_uvision_lpc1768/HelloWorld: HelloWorld.uvopt
+Only in HelloWorld_uvision_lpc1768/HelloWorld: HelloWorld.uvproj
+Only in HelloWorld_gcc_arm_lpc1768/HelloWorld: Makefile
+Only in HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768: ARM
+Only in HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768: GCC_ARM
+ww@debian:~/e4357/hw2$ 
+ww@debian:~/e4357/hw2$ diff --recursive --brief HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM
+Only in HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM: capi.ar
+Files HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM/cmsis_nvic.o and HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM/cmsis_nvic.o differ
+Files HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM/core_cm3.o and HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM/core_cm3.o differ
+Only in HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM: libcapi.a
+Only in HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM: libmbed.a
+Only in HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM: LPC1768.ld
+Only in HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM: LPC1768.sct
+Only in HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM: mbed.ar
+Files HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM/startup_LPC17xx.o and HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM/startup_LPC17xx.o differ
+Only in HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM: sys.o
+Files HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM/system_LPC17xx.o and HelloWorld_uvision_lpc1768/HelloWorld/mbed/LPC1768/ARM/system_LPC17xx.o differ
+#########
+Answer: 9 files are different and 4 files have the same name but different content
+############################################################
