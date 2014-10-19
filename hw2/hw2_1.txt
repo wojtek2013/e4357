@@ -88,3 +88,14 @@ Files HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768//GCC_ARM/system_LPC17xx
 #########
 Answer: 9 files are different and 4 files have the same name but different content
 ############################################################
+
+#############################################################
+Question: What is the "Entry point address:" of your program?  (hint: using readelf)
+########
+ww@debian:~/e4357/hw2$ readelf -a HelloWorld_gcc_arm_lpc1768/HelloWorld/mbed/LPC1768/GCC_ARM/libmbed.a | grep -i entry | uniq
+  Entry point address:        0x0
+#########
+Answer: 0x0
+#############################################################
+
+  
