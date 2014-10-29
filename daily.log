@@ -1,0 +1,25 @@
+//================================= 10-29-2014 - Init log entry ===================================//
+
+READING:
+Started reading about Bluetooth Low Energy (BLE) which is other name for Bluetooth 4.0 standard.
+
+DOING:
+Spent over 1hr on mbed.org trying to have some programs running on my Nordic nRF51822 kit.
+
+WHAT WORKED:
+Simple Hello World (blinking LED) worked.
+This is same code as Hello World (or new project with hello_world_blinky template) for NXP1768 but 
+the compiler must be instructed to create executeble file for nRF51822. This is done by clicking button 
+in the right-upper part of the compiler screen (just above the code window) and selecting nRF51822 from 
+the list of available platforms. Compiler then creates .hex file.
+
+OTHER OBSERVATIONS:
+Couldn't put .hex into nRF51822 when used mbed compiler via Chrome browser - antivirus kicked in and 
+prevented from downloading .hex file. Had to use Firefox to download .hex file onto nRF51822 flash.
+
+WHAT DIDN'T WORK (YET):
+Other programs (BLE Beacon, BLE Thermometer) compile but don't know yet how to check if they work.
+Downloaded and installed Android app (Physical Web) on my S4 that was supposed to work together with
+Physical Web program from mbed - the app starts and shows "screening for beacon" graphics but nothing 
+happens even though Physical Web program is compiled and downloaded on nRF51822.
+
