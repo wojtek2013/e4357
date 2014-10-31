@@ -23,3 +23,12 @@ Downloaded and installed Android app (Physical Web) on my S4 that was supposed t
 Physical Web program from mbed - the app starts and shows "screening for beacon" graphics but nothing 
 happens even though Physical Web program is compiled and downloaded on nRF51822.
 
+//============================================ 10-30-2014 =====================================//
+READING:
+Cont. reading about Bluetooth Low Energy (BLE).
+DOING:
+HW4 program based on chapter 7.9
+WHAT WORKED:
+HW4 compiled and executed.
+OTHER OBSERVATIONS:
+None
