@@ -2,15 +2,36 @@
    https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=firmware
 
 . . . 
-. . . 
-. . . 
-. . . 
-. . . 
-. . . 
-. . . 
-. . . 
-. . . 
 
 2. Search results are returned within 0.36 seconds.
 
 What is happening in the background?
+ANSWER:
+The search query is redirected to the most optimal server center based on the user location and current load of the servers 
+(Source 1 below). 
+On the server side GFS (Google File System) (Source 2) and utility algorithms like MapReduce (Source 3) help to extract 
+the list of answers.
+
+Source 1: http://blogoscoped.com/archive/2008-07-08-n70.html
+Despite Google’s simplistic interface, search is complicated. For example when a user in San Francisco enters a query like 
+google.com/search?q=blogoscoped, the user’s browser first completes a DNS lookup mapping www.google.com to a specific IP 
+address. At this stage, Google’s DNS load balancer determines which cluster of computers at which of Google’s 36+ data 
+centers will process the query. If the nearest data center isn’t available to process the query, it’s passed on to the 
+nearest available data center. (For this example, the nearest known data centers might be Mountain View, CA, Pleasanton, CA, 
+San Jose, CA, Los Angeles, CA, Palo Alto, CA, Seattle, WA, Portland, OR and/or The Dalles, OR.) Once a data center has been 
+determined, the query is transmitted via “HTTP” to a specific data center and individual cluster of 1,800 or more servers.
+Upon arrival at the data center cluster, each query is greeted by Google’s second load balancer. The Google hardware load 
+balancer consists of 10 to 15 machines and determines which machines are available to process the query. The hardware load 
+balancer then earmarks and hands off the query to a Google Mixer. This “Google Mixer” software, will later combine all of 
+the elements of Universal search results with the right blend of ads. The Mixer, queries a number of Google Web Servers 
+(GWS), selecting one available to execute the query. The query is then executed, simultaneously hitting 300 to 400 
+back-end machines representing Google’s verticals, advertising and spell check among others. At this point the best results 
+are gathered and the query data returns to the Google Mixer. The mixer takes this data, blends Universal elements with ads 
+while pasting results in order based on relevancy. The ordered results then go back to the GWS for HTML coding. Once the HTML 
+is completed and pages formatted, the search engine results are marked “done” by the load balancer and returned to the user 
+as search engine results pages (SERPs). Google search engine results 1-10 of about 517,000 for “blogoscoped" returned in 
+.03 seconds. Today it’s estimated that Google queries travel across 700-1000* machines, a figure that has nearly doubled 
+since 2006 perhaps due in part to the introduction of Google Universal.
+
+Source 2: http://static.googleusercontent.com/media/research.google.com/en/us/archive/gfs-sosp2003.pdf
+Source 3: http://static.googleusercontent.com/media/research.google.com/en/us/archive/googlecluster-ieee.pdf
