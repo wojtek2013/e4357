@@ -7,8 +7,7 @@ Q1: Is there any compile error with the following code (if any)?
  
 Explain:
 
-
-
+ANSWER: No, there is no compile error - 3rd element of Arr gets assigned value of 7
 
 --------------------------------------------------------------------
 Q2: What is the difference between the following 3 statements? 
@@ -16,69 +15,63 @@ Q2: What is the difference between the following 3 statements?
 const int * px; 
 int const * px; 
 int * const px; 
+//ANSWER:
+const int * px; // Pointer to a const int - Value pointed to by px can’t change
+int const * px; // same as above - Pointer to a const int - Value pointed to by px can’t change
+int * const px; // Const pointer to an int - px cannot point to a different location.
 
 Is there any compile error for the following cases?
 case1: 
 int x = 13; 
 const int * px; 
 px = & x; 
-
+//ANSWER: no
 case 2: 
 int x = 13; 
 int const * px; 
 px = & x; 
-
+//ANSWER: no 
 case 3: 
 int x = 13; 
 int * const px; 
 px = & x; 
-
+//ANSWER: yes
+//error C2734: 'px' : const object must be initialized if not extern
+//error C3892: 'px' : you cannot assign to a variable that is const
 Explain:
-
-
-
-
-
-
-
-
-
-
-
+see ANSWER lines above.
 
 --------------------------------------------------------------------
 Q3: Write a function to set or clear ith bit of a 32-bit register. 
 	Where ith (0-based) := {0, 1, 2, …, 31 } 
 void reg_set(volatile unsigned int * pReg, int ith) 
 { 
-
-
-
-
-
+//ANSWER:
+	volatile unsigned int *tmp = *&pReg;
+	if(ith>-1 && ith<32) {
+		*tmp |= (0x1 << ith);
+		*&pReg=tmp;
+	}
 } 
 
 void reg_clear(volatile unsigned int * pReg, int ith) 
 { 
-
-
-
-
-
+//ANSWER:
+	volatile unsigned int *tmp = *&pReg;
+	if(ith>-1 && ith<32) {
+		*tmp &= ~(0x1 << ith);
+		*&pReg=tmp;
+	}
 } 
-
-
 
 --------------------------------------------------------------------
 Q4: Write a swap function in C.
+//ANSWER:
 void swap(unsigned int * px, unsigned int *py) { 
-
-
-
-
-
-
-
+  unsigned int *p;
+  *p=*px;
+  *px=*py;
+  *py=*p;
 } 
 
 --------------------------------------------------------------------
@@ -89,13 +82,6 @@ unsigned int a0 = (unsigned int) &Arr[0];
 unsigned int a3 = (unsigned int) &Arr[3]; 
 printf(“%d\n”, a3 – a0); 
 
-
-
-
-
-
-
-
-
+ANSWER: 12 - since it is a difference between the addresses of element 3 and 0.
 
 END
