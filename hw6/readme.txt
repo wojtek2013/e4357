@@ -26,3 +26,11 @@ inline int CircularBufferPrint(CircularBuffer* que)
 { }
 
 #endif
+
+NOTES: 
+1. Implementation will be based on:
+http://shengliangsong.blogspot.com/2013/11/circular-buffer-in-c.html?_escaped_fragment_=#!
+2. To compile:
+gcc crcbuf.c -o crcbuf.exe
+
+
