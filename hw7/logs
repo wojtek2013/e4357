@@ -1,0 +1,92 @@
+root@ubuntu-VirtualBox:~# luarocks show md5
+
+MD5 1.2-1 - Basic cryptographic library
+
+MD5 offers basic cryptographic facilities for Lua 5.X: a hash (digest)
+function, a pair crypt/decrypt based on MD5 and CFB, and a pair crypt/decrypt
+based on DES with 56-bit keys.
+
+License:     MIT/X11
+Homepage:     http://www.keplerproject.org/md5/
+Installed in:     /usr/local
+
+Modules:
+    md5.core
+    des56
+    md5
+
+root@ubuntu-VirtualBox:~# luarocks show lpack
+
+lpack 20070629-1 - A library for packing and unpacking binary data
+
+A library for packing and unpacking binary data. The library adds two functions
+to the string library: pack and unpack.
+
+License:     Public domain
+Homepage:     http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lpack
+Installed in:     /usr/local
+
+Modules:
+    pack
+
+root@ubuntu-VirtualBox:~# luarocks show luafilesystem
+
+LuaFileSystem 1.6.2-2 - File System Library for the Lua Programming Language
+
+LuaFileSystem is a Lua library developed to complement the set of functions
+related to file systems offered by the standard Lua distribution. LuaFileSystem
+offers a portable way to access the underlying directory structure and file
+attributes.
+
+License:     MIT/X11
+Installed in:     /usr/local
+
+Modules:
+    lfs
+
+root@ubuntu-VirtualBox:~# luarocks show luasocket
+
+LuaSocket 3.0rc1-1 - Network support for the Lua language
+
+LuaSocket is a Lua extension library that is composed by two parts: a C core
+that provides support for the TCP and UDP transport layers, and a set of Lua
+modules that add support for functionality commonly needed by applications that
+deal with the Internet.
+
+License:     MIT
+Homepage:     http://luaforge.net/projects/luasocket/
+Installed in:     /usr/local
+
+Modules:
+    socket.http
+    socket
+    socket.headers
+    socket.unix
+    socket.tp
+    socket.url
+    socket.smtp
+    socket.serial
+    mime.core
+    ltn12
+    mime
+    socket.ftp
+    socket.core
+
+root@ubuntu-VirtualBox:~# luarocks list
+
+Installed rocks:
+----------------
+
+lpack
+  20070629-1 (installed) - /usr/local/lib/luarocks/rocks
+
+luafilesystem
+  1.6.2-2 (installed) - /usr/local/lib/luarocks/rocks
+
+luasocket
+  3.0rc1-1 (installed) - /usr/local/lib/luarocks/rocks
+
+md5
+  1.2-1 (installed) - /usr/local/lib/luarocks/rocks
+
+root@ubuntu-VirtualBox:~# 
